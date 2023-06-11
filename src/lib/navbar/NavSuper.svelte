@@ -1,9 +1,11 @@
 <script>
-	let title = ' Floo';
+	import { page } from '$app/stores';
+	$: rid = $page.route.id;
+	let title = 'Flaze';
 	let navs = [
 		{
 			name: 'Home',
-			link: '/'
+			link: '/c/navbar'
 		},
 		{
 			name: 'About',
@@ -18,7 +20,7 @@
 
 <div class="navbar bg-base-300">
 	<div class="navbar-start">
-		<div class="dropdown ">
+		<div class="dropdown">
 			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 			<!-- svelte-ignore a11y-label-has-associated-control -->
 			<label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -46,7 +48,10 @@
 				{/each}
 			</ul>
 		</div>
-		<a class="btn btn-ghost normal-case text-xl font-bold text-gray-900 hover:bg-yellow-300 border-2 border-slate-800 hover:border-slate-800 " href="/">
+		<a
+			class="btn btn-ghost normal-case text-xl font-bold text-gray-900 hover:bg-yellow-300 border-2 border-slate-800 hover:border-slate-800"
+			href="/"
+		>
 			<img
 				src="https://cdn-icons-png.flaticon.com/512/40/40531.png?w=740&t=st=1686503511~exp=1686504111~hmac=7583e419f52a2d049d05a17708a447e5c50de971bf2098287ed1a342905a33fb"
 				class="w-[36px]"
@@ -59,10 +64,20 @@
 		<ul class="menu menu-horizontal px-1">
 			{#each navs as nav}
 				<li>
-					<a href={nav.link} class="mx-1 capitalize btn-ghost hover:btn-warning text-slate-900 btn btn-sm hover:text-gray-900">{nav.name}</a>
+					<a
+						href={nav.link}
+						class:active={rid === nav.link}
+						class="mx-1 capitalize btn-ghost hover:btn-warning text-slate-900 btn btn-sm hover:text-gray-900"
+						>{nav.name}</a
+					>
 				</li>
 			{/each}
 		</ul>
 	</div>
-	
 </div>
+<style>
+    .active{
+        color: #00071c;
+        background-color: #50c3f9;
+    }
+</style>

@@ -1,5 +1,6 @@
 <script>
 	import { fade, scale } from 'svelte/transition';
+	
 	let navs = [
 		{
 			name: 'Home',
@@ -22,8 +23,7 @@
     */
 </script>
 
-
-<div class="navbar  md:pl-32 border-b-2 backdrop-blur-sm bg-[#85FFB470]  border-slate-800 z-20">
+<div class="navbar md:pl-32 border-b-2 backdrop-blur-sm bg-[#85FFB470] border-slate-800 z-20">
 	<div class="navbar-start">
 		<div class="dropdown">
 			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
