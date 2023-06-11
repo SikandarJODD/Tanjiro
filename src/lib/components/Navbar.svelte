@@ -11,6 +11,10 @@
 			link: '/c'
 		},
 		{
+			name: 'Custom',
+			link: '/cu'
+		},
+		{
 			name: 'about',
 			link: '/a'
 		}
