@@ -11,6 +11,10 @@
 			path: '/cu/hero'
 		},
 		{
+			name: 'Products Card',
+			path: '/cu/products'
+		},
+		{
 			name: 'Cards',
 			path: '/cu/card'
 		}
