@@ -56,9 +56,10 @@
 		margin: 14px;
 		border: 2px solid black;
 		border-radius: 8px;
-		padding: 15px;
+		padding: 15px 15px 30px 15px;
 		grid-area: 1 / 2 / 6 / 3;
 		height: fit-content;
+		min-height: 300px;
 	}
 	@media (max-width: 768px) {
 		.parent {

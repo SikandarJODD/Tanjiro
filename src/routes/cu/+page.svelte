@@ -1,4 +1,5 @@
 <script>
+	import SvModal from '$lib/cu/example/svModal.svelte';
 </script>
 
 <main class="porse prose-p:text-gray-800 prose-pink">
@@ -8,4 +9,6 @@
 		you edit the Components.
 	</p>
 	<p>You Can Copy <a href="/c">Inbuilt Components</a></p>
+	<h2 class="text-sky-950">Editable Component Example :</h2>
+	<SvModal />
 </main>
