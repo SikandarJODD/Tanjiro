@@ -8,11 +8,11 @@
 		},
 		{
 			name: 'Hero',
-			path: '/cu/navbar'
+			path: '/cu/hero'
 		},
 		{
 			name: 'Cards',
-			path: '/cu/navbar'
+			path: '/cu/card'
 		}
 	];
 </script>
@@ -29,7 +29,7 @@
 			{/each}
 		</ol>
 	</div>
-	<div class="div2 prose md:max-w-full"><slot /></div>
+	<div class="div2  md:max-w-full"><slot /></div>
 </div>
 
 <style>
@@ -76,10 +76,12 @@
 			height: fit-content;
 			grid-area: 1 / 1 / 2 / 2;
 			width: 90vw;
+			margin: 15px auto;
 		}
 		.div2 {
 			height: max-content;
-			max-width: 90vw;
+			max-width: 95vw;
+			margin: 10px auto;
 			grid-area: 2 / 1 / 5 / 2;
 		}
 	}
