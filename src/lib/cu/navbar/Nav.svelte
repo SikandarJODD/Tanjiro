@@ -1,4 +1,5 @@
 <script>
+	import { copy } from 'svelte-copy';
 	let site_name = '';
 	let nv = '';
 	let navs = [
@@ -16,23 +17,103 @@
 	let titleBorder = false;
 	let showbtn = true;
 
+	$: btnCode = showbtn
+		? `<div class="navbar-end">
+				<a class="btn">Button</a>
+			</div>`
+		: '';
+
 	// Menus
 	let allMenuBold = false;
 	let firstMenuBold = false;
 	let allMenuBorder = false;
+	$: uiMobileElement = navs.map(
+		(nav) => `<li><a href=${nav.href} class="capitalize">${nav.name}</a></li>`
+	);
+	$: ulElement = navs
+		.map(
+			(nav) =>
+				`<li class="${firstMenuBold ? 'first:font-bold' : ''}"> <a href="${
+					nav.href
+				}" class="capitalize mx-1 ${allMenuBold ? 'font-bold ' : ''} ${
+					allMenuBorder ? 'border-2 hover:border-2 hover:bg-slate-700 border-slate-700' : ''
+				}  mbox">${nav.name}</a> </li> \n \t \t`
+		)
+		.join('');
+	$: console.log(ulElement);
+	$: code = `<div class="navbar bg-base-100">
+		<div class="navbar-start">
+			<div class="dropdown">
+				<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+				<!-- svelte-ignore a11y-label-has-associated-control -->
+				<label tabindex="0" class="btn btn-ghost lg:hidden">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-5 w-5"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						><path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 6h16M4 12h8m-8 6h16"
+						/></svg
+					>
+				</label>
+				<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+				<ul
+					tabindex="0"
+					class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+				>
+					${uiMobileElement}
+				</ul>
+			</div>
+			<a
+				class=" btn btn-outline normal-case text-xl text-gray-800 ${titleBold ? 'font-bold' : ''} ${
+		titleBorder ? 'border-2 border-slate-800 hover:border-slate-800' : 'border-none'
+	} "
+				href="/">${site_name.length === 0 ? 'Title' : site_name}</a
+			>
+
+		</div>
+		<div class="navbar-center hidden lg:flex">
+			<ul class="menu menu-horizontal px-1">
+				${ulElement}
+			</ul>
+		</div>
+		${btnCode}
+
+	</div>`;
+
+	// btn
+	let copyBtn = 'Copy Code';
 </script>
 
 <div class="not-prose">
-	<div>
-		<label for="name" class="font-bold text-gray-700">Name : </label>
-		<input
-			type="text"
-			placeholder="Type here"
-			class="input input-bordered input-success input-sm max-w-xs"
-			bind:value={nv}
-		/>
-		<button class="btn btn-sm btn-outline capitalize mx-2" on:click={navUpdate}>Update</button>
+	<div class="flex align-middle items-center">
+		<div>
+			<label for="name" class="font-bold text-gray-700">Name : </label>
+			<input
+				type="text"
+				placeholder="Type here"
+				class="input input-bordered input-success input-sm max-w-xs"
+				bind:value={nv}
+			/>
+			<button class="btn btn-sm btn-outline capitalize mx-2" on:click={navUpdate}>Update</button>
+		</div>
+		<button
+			class="btn btn-sm btn-outline capitalize m-2"
+			use:copy={code}
+			on:click={() => {
+				copyBtn = 'Copied';
+				setTimeout(() => {
+					copyBtn = 'Copy Code';
+				}, 2000);
+			}}>{copyBtn}</button
+		>
 	</div>
+
 	<div class="box m-2">
 		{#each navs as item}
 			<div class="btn btn-outline btn-sm capitalize gap-1 m-1">
@@ -149,9 +230,9 @@
 			<!-- {@html updated} -->
 		</div>
 		<div class="navbar-center hidden lg:flex">
-			<ul class="menu menu-horizontal px-1  ">
+			<ul class="menu menu-horizontal px-1">
 				{#each navs as item}
-					<li class="{firstMenuBold ? 'first:font-bold' : ''}">
+					<li class={firstMenuBold ? 'first:font-bold' : ''}>
 						<a
 							href={item.href}
 							class="capitalize mx-1 {allMenuBold ? 'font-bold ' : ''} {allMenuBorder
@@ -169,8 +250,9 @@
 		{/if}
 	</div>
 </div>
+
 <style>
-	.mbox:hover{
+	.mbox:hover {
 		background: lightgreen;
 	}
 </style>
