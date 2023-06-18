@@ -1,4 +1,5 @@
 <script>
+	import { fade, fly, scale } from 'svelte/transition';
 	import { goto } from '$app/navigation';
 
 	let comps = [
@@ -19,6 +20,9 @@
 			path: '/cu/card'
 		}
 	];
+
+	export let data;
+	$: ({ pathname } = data);
 </script>
 
 <div class="parent relative">
@@ -33,7 +37,13 @@
 			{/each}
 		</ol>
 	</div>
-	<div class="div2  md:max-w-full"><slot /></div>
+	<div class="div2 md:max-w-full">
+		{#key pathname}
+			<div in:scale={{ duration: 300 }}>
+				<slot />
+			</div>
+		{/key}
+	</div>
 </div>
 
 <style>

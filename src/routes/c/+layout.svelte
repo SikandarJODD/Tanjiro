@@ -1,13 +1,20 @@
 <script>
 	import { goto } from '$app/navigation';
+	import { scale, fade, fly } from 'svelte/transition';
 
 	let comps = [
 		{
 			name: 'Navbar',
 			path: '/c/navbar'
 		},
-		
+		{
+			name: 'Cards',
+			path: '/c/cards'
+		}
 	];
+
+	export let data;
+	$: ({ pathname } = data);
 </script>
 
 <div class="parent relative">
@@ -22,7 +29,13 @@
 			{/each}
 		</ol>
 	</div>
-	<div class="div2 prose md:max-w-full"><slot /></div>
+	<div class="div2 prose md:max-w-full">
+		{#key pathname}
+			<div in:scale={{ duration: 300 }}>
+				<slot />
+			</div>
+		{/key}
+	</div>
 </div>
 
 <style>
