@@ -1,8 +1,8 @@
 <script>
+	import Hero1 from '$lib/cu/hero/Hero1.svelte';
 </script>
 
-<main class="prose">
-	<div class="prose-h1:text-indigo-700">
-		<h1>Hero Section</h1>
-	</div>
+<main class="prose max-w-full">
+	<h1>Hero Section</h1>
+	<Hero1 />
 </main>
