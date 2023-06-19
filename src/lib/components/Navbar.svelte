@@ -1,6 +1,6 @@
 <script>
 	import { fade, scale } from 'svelte/transition';
-	
+
 	let navs = [
 		{
 			name: 'Home',
@@ -60,8 +60,8 @@
 			</ul>
 		</div>
 		<a
-			class="btn btn-ghost normal-case text-xl font-mono border-2 border-gray-700 hover:bg-yellow-300 hover:border-gray-900"
-			href="/">Svelte-Components</a
+			class=" rounded-md px-3 py-2 normal-case text-xl font-mono border-2 border-gray-700 bg-yellow-300 box_sqr hover:bg-yellow-300 hover:border-gray-900"
+			href="/">Cu</a
 		>
 	</div>
 	<div class="navbar-center hidden lg:flex">
@@ -78,3 +78,15 @@
 		</ul>
 	</div>
 </div>
+
+<style>
+	.box_sqr {
+		font-weight: bold;
+		transition: all 0.2s ease;
+	}
+	.box_sqr:hover {
+		transition: all 0.2s ease;
+		box-shadow: 3px 3px #02375f;
+		transform: translate(-3px, -3px);
+	}
+</style>
