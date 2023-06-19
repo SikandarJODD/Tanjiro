@@ -10,6 +10,10 @@
 		{
 			name: 'Cards',
 			path: '/c/cards'
+		},
+		{
+			name : 'Grids',
+			path : '/c/grids'
 		}
 	];
 
