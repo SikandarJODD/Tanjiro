@@ -4,15 +4,22 @@
 	let nv = '';
 	let navs = [
 		{
+			id: 1,
 			name: 'Home',
 			href: '/'
 		}
 	];
 	let navUpdate = () => {
-		navs = [...navs, { name: nv.toLowerCase(), href: `/${nv.toLowerCase()}` }];
+		if (nv.length !== 0) {
+			navs = [
+				...navs,
+				{ id: navs.length + 1, name: nv.toLowerCase(), href: `/${nv.toLowerCase()}` }
+			];
+		} else {
+			nv = 'bhai kuch tho type kar ';
+		}
 		nv = '';
 	};
-	$: console.log(navs);
 	let titleBold = false;
 	let titleBorder = false;
 	let showbtn = true;
@@ -40,7 +47,6 @@
 				}  mbox">${nav.name}</a> </li> \n \t \t`
 		)
 		.join('');
-	$: console.log(ulElement);
 	$: code = `<div class="navbar bg-base-100">
 		<div class="navbar-start">
 			<div class="dropdown">
@@ -115,13 +121,13 @@
 	</div>
 
 	<div class="box m-2">
-		{#each navs as item}
+		{#each navs as item, index}
 			<div class="btn btn-outline btn-sm capitalize gap-1 m-1">
 				{item.name}
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<svg
 					on:click={() => {
-						navs = navs.filter((nav) => nav.name !== item.name);
+						navs = navs.filter((nav) => nav.id !== item.id);
 					}}
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"

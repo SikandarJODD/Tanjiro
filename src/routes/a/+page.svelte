@@ -20,7 +20,7 @@
 		<div class="text-center">
 			<div class=" rounded-full">
 				<img
-					src="https://media.licdn.com/dms/image/C4D03AQGP1dNhTLkZrA/profile-displayphoto-shrink_800_800/0/1662137583464?e=1691020800&v=beta&t=VsLUVmVvzVdtij0f-Qe5KjE_Vq4sYiyQ4Ov_8qkuF6w"
+					src="https://media.licdn.com/dms/image/C4D03AQGP1dNhTLkZrA/profile-displayphoto-shrink_400_400/0/1662137583464?e=1692835200&v=beta&t=pt5aAnMxmxxA7qyM7f9LXkFlYx20HYptKJ7ZCoK238Y"
 					alt=""
 					class="rounded-full h-52 w-52 mx-auto border-2 p-2 border-green-500 hover:scale-110 transition duration-300 ease-in-out mb-4"
 				/>
