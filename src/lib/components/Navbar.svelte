@@ -27,7 +27,9 @@
     */
 </script>
 
-<div class="navbar md:pl-32 border-b-2 backdrop-blur-sm bg-[#85FFB470] border-slate-800 z-20">
+<div
+	class="navbar md:pl-32 border-b-2 backdrop-blur-sm bg-[#dbf8fb] border-slate-800 z-20 top-0 fixed"
+>
 	<div class="navbar-start">
 		<div class="dropdown">
 			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
@@ -68,11 +70,7 @@
 		<ul class="menu menu-horizontal px-1">
 			{#each navs as nav}
 				<li>
-					<a
-						href={nav.link}
-						class="btn btn-sm mx-1 capitalize border-2 border-gray-600 hover:btn-outline"
-						>{nav.name}</a
-					>
+					<a href={nav.link} class=" mx-1 capitalize px-3 py-2 text-[1.04rem]">{nav.name} </a>
 				</li>
 			{/each}
 		</ul>

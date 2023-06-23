@@ -1,1 +1,0 @@
-<h1>Hello Minting</h1>

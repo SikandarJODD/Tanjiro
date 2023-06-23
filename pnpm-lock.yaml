@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  lucide-svelte:
+    specifier: ^0.252.0
+    version: 0.252.0(svelte@3.59.1)
   svelte-copy:
     specifier: ^1.3.2
     version: 1.3.2
@@ -835,6 +838,14 @@ packages:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
     dev: true
 
+  /lucide-svelte@0.252.0(svelte@3.59.1):
+    resolution: {integrity: sha512-Uhvgwty52/46x8H9qTgGy7DzUct4GTDsrNIARjEtjk99GnctEdDfVB0sk45J0J+fW25cH38RfontRcnFF4xoMA==}
+    peerDependencies:
+      svelte: ^3.49.0
+    dependencies:
+      svelte: 3.59.1
+    dev: false
+
   /magic-string@0.27.0:
     resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
     engines: {node: '>=12'}
@@ -1301,7 +1312,6 @@ packages:
   /svelte@3.59.1:
     resolution: {integrity: sha512-pKj8fEBmqf6mq3/NfrB9SLtcJcUvjYSWyePlfCqN9gujLB25RitWK8PvFzlwim6hD/We35KbPlRteuA6rnPGcQ==}
     engines: {node: '>= 8'}
-    dev: true
 
   /tailwindcss@3.3.2:
     resolution: {integrity: sha512-9jPkMiIBXvPc2KywkraqsUfbfj+dHDb+JPWtSJa9MLFdrPyazI7q6WX2sUrm7R9eVR7qqv3Pas7EvQFzxKnI6w==}

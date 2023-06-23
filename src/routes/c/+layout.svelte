@@ -12,8 +12,8 @@
 			path: '/c/cards'
 		},
 		{
-			name : 'Grids',
-			path : '/c/grids'
+			name: 'Grids',
+			path: '/c/grids'
 		}
 	];
 
@@ -22,7 +22,7 @@
 </script>
 
 <div class="parent relative">
-	<div class="div1 md:sticky md:top-20 md:w-[97%]">
+	<div class="div1 md:fixed md:top-20 md:w-[19%]">
 		<ol>
 			{#each comps as item, index}
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -63,7 +63,7 @@
 		min-height: 200px;
 	}
 	.div2 {
-		margin: 10px;
+		margin: 88px 10px;
 		border: 2px solid black;
 		border-radius: 8px;
 		padding: 15px;

@@ -30,11 +30,14 @@
 </script>
 
 <div class="parent relative">
-	<div class="div1 md:sticky md:top-20 md:w-[97%]">
+	<div class="div1 md:fixed md:top-20 md:w-[19%]">
 		<ol>
 			{#each comps as item, index}
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
-				<li class="hover:bg-sky-300 rounded-md ease-out transition-all" on:click={() => goto(item.path)}>
+				<li
+					class="hover:bg-sky-300 rounded-md ease-out transition-all"
+					on:click={() => goto(item.path)}
+				>
 					<a class="mx-4 my-3 text-slate-900 font-mono" href={item.path}>{index + 1}. {item.name}</a
 					>
 				</li>
@@ -71,7 +74,7 @@
 		min-height: 200px;
 	}
 	.div2 {
-		margin: 14px;
+		margin: 90px 10px;
 		border: 2px solid black;
 		border-radius: 8px;
 		padding: 15px 15px 30px 15px;

@@ -8,7 +8,7 @@
 		<div class="md:max-w-2xl">
 			<h1 class="text-5xl font-bold" in:scale >
 				<span class="md:bg-gray-50 md:border-2 border-slate-700 rounded-lg md:p-2">Copy-Paste</span>
-				Components
+				Co
 			</h1>
 			<p class="py-6 text-lg">Daisy UI + Tailwind CSS components for Building Website</p>
 			<a href="/cu" class="btn btn-outline border-2 hover:bg-emerald-300 hover:text-gray-800"
