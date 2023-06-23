@@ -10,8 +10,8 @@
 
 <main
 	class="{isBorder
-		? ' my-2 hover:border-slate-900'
-		: ' '} border border-slate-400 md:max-w-[70%] rounded-md px-2 py-4 relative hover:bg-base-200 transition-all duration-300"
+		? ' my-2 '
+		: ' '} hover:border-slate-900 border border-slate-400 md:max-w-[70%] rounded-md px-2 py-4 relative hover:bg-base-200 transition-all duration-300"
 	on:mouseenter={() => (isHover = true)}
 	on:mouseleave={() => (isHover = false)}
 >
