@@ -17,7 +17,7 @@
 			<div
 				class="relative rounded-full px-3 py-1 text-sm leading-7 text-gray-600 ring-1 ring-gray-900/20 hover:ring-gray-900/40 shadow-md"
 			>
-				Latest Updates on Components <a href="/c" class="font-semibold text-indigo-600"
+				Latest Updates on Components <a href="/c/i" class="font-semibold text-indigo-600"
 					><span class="absolute inset-0" aria-hidden="true" /> Installation Part
 					<span aria-hidden="true">&rarr;</span></a
 				>

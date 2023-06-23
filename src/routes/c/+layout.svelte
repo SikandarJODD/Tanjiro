@@ -14,6 +14,10 @@
 		{
 			name: 'Grids',
 			path: '/c/grids'
+		},
+		{
+			name: 'Install',
+			path: '/c/i'
 		}
 	];
 
