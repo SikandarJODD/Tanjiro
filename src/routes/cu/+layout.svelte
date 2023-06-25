@@ -96,13 +96,13 @@
 			min-height: 120px;
 			height: fit-content;
 			grid-area: 1 / 1 / 2 / 2;
-			width: 90vw;
-			margin: 15px auto;
+			width: 92vw;
+			margin-top: 90px;
 		}
 		.div2 {
 			height: max-content;
-			max-width: 95vw;
-			margin: 10px auto;
+			max-width: 92vw;
+			margin: 20px auto;
 			grid-area: 2 / 1 / 5 / 2;
 		}
 	}

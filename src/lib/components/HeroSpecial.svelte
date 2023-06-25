@@ -41,15 +41,16 @@
 				<a href="#" class="text-sm font-semibold leading-6 text-gray-900"
 					>Learn more <span aria-hidden="true">→</span></a
 				> -->
-				<a href="/c">
-					<button class="btn btn-outline btn-md text-lg capitalize">
+				<a href="/c" class="flex">
+					<button class="btn btn-outline btn-md temt-sm md:text-lg capitalize">
 						<BadgeCheck />
 						Components</button
 					>
 				</a>
-				<a href="/cu">
-					<button class="btn btn-md text-lg capitalize btn-outline">
-						<CheckCircle /> Custom
+				<a href="/cu" class="flex">
+					<button class="btn btn-md text-sm md:text-lg capitalize btn-outline">
+						<CheckCircle />
+						Custom
 					</button>
 				</a>
 			</div>

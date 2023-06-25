@@ -85,15 +85,18 @@
 		}
 
 		.div1 {
+			margin-top: 85px;
+			position: relative;
 			min-height: 120px;
 			height: fit-content;
 			grid-area: 1 / 1 / 2 / 2;
-			width: 90vw;
+			width: 92vw;
 		}
 		.div2 {
 			height: max-content;
-			max-width: 90vw;
+			max-width: 92vw;
 			grid-area: 2 / 1 / 5 / 2;
+			margin: 5px;
 		}
 	}
 </style>
