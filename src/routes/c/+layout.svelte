@@ -1,7 +1,7 @@
 <script>
 	import { goto } from '$app/navigation';
 	import { scale, fade, fly } from 'svelte/transition';
-
+	
 	let comps = [
 		{
 			name: 'Navbar',
